@@ -9,7 +9,8 @@ export default {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
-        'custom-brown': '#573a1e'
+        'custom-brown': '#573a1e',
+        'sage': '#b8b08D'
       }
     },
   },

@@ -10,14 +10,22 @@ export default function Navbar() {
     () => router.push("/writing"),
     [router],
   );
+  const goToExperience = React.useCallback(
+    () => router.push("/experience"),
+    [router],
+  );
   return (
-    <div className="bg-custom-brown flex h-10 w-full flex-row justify-between p-5 font-serif text-lg text-white">
-      <div onClick={goHome}>Radha Jain</div>
+    <div className="bg-custom-brown h-50 sticky top-0 flex w-full flex-row justify-between pt-2 font-serif text-lg text-white">
+      <div onClick={goHome} className="cursor-pointer">
+        Radha Jain
+      </div>
       <ul className="flex flex-row gap-5">
+        <li>
+          <button onClick={goToExperience}>Experience</button>
+        </li>
         <li>
           <button onClick={goToWriting}>Writing</button>
         </li>
-        <li>Contact</li>
       </ul>
     </div>
   );
