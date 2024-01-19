@@ -15,7 +15,7 @@ export default function Navbar() {
     [router],
   );
   return (
-    <div className=" h-50 sticky top-0 flex w-full flex-row justify-between pt-2 text-lg font-semibold ">
+    <div className=" h-50 sticky top-0 flex w-full flex-row justify-between pb-2 pt-2 text-lg font-semibold backdrop-blur">
       <div onClick={goHome} className="hover:text-secondary cursor-pointer">
         Radha Jain
       </div>

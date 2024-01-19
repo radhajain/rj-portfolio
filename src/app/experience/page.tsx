@@ -10,7 +10,9 @@ export default function Experience() {
             <span className="text-2xl">{title}</span>
             <span className="text-secondary font-semibold">{dateRange}</span>
           </div>
-          <div className="text-right md:flex-1">{description}</div>
+          <div className="text-left opacity-80 md:flex-1 md:text-right">
+            {description}
+          </div>
         </div>
       ))}
     </div>
@@ -27,12 +29,14 @@ const workExperience: readonly WorkExperience[] = [
   {
     title: "Product Engineer at Palantir",
     dateRange: "Feb 2020 - Present",
-    description: "Building AI applications",
+    description:
+      "One of 4 developers of AIP Logic, a no-code IDE for deploying production-ready LLM functions complete with data integration, debugging, observability and evaluation features. Used by over 25,000 people within 6 months, to author over 300,000 functions in production at ~150 customers.",
   },
   {
     title: "Founder at Fit to Form (YC S19)",
     dateRange: "May 2019 - Dec 2019",
-    description: "Shop for clothes that fit you perfectly",
+    description:
+      "Built a fashion search engine and site for curated online shopping, for clothes guaranteed to fit.",
   },
   {
     title: "Mayfield Fellow at Stanford University",

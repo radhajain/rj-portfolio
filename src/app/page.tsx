@@ -34,7 +34,9 @@ export default function HomePage() {
                   key={category}
                   className="flex flex-wrap justify-end gap-5 sm:flex-nowrap "
                 >
-                  <div className="flex-1 text-left">{category}</div>
+                  <div className="text-secondary flex-1 text-left font-semibold">
+                    {category}
+                  </div>
                   <div className="text-sage flex flex-1 flex-col gap-2 text-right opacity-80">
                     {items.map((item) => (
                       <div key={item}>{item}</div>
