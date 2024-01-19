@@ -9,8 +9,9 @@ export default {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
-        'custom-brown': '#573a1e',
-        'sage': '#b8b08D'
+        background: "var(--color-background)",
+        "text-color": "var(--color-text)",
+        secondary: "var(--color-secondary)", 
       }
     },
   },

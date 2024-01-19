@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 export default function HomePage() {
   return (
-    <div className="justify-spaced flex flex-wrap items-start gap-28 font-serif text-white lg:flex-nowrap">
+    <div className="justify-spaced flex flex-wrap items-start gap-28 lg:flex-nowrap">
       <div className=" flex min-w-full flex-1 flex-col gap-5 text-xl leading-8 sm:min-w-[400px]">
         <div>
           I&apos;m Radha, a front-end developer based in New York building 0 to
@@ -13,7 +14,7 @@ export default function HomePage() {
           I currently work on a small team building{" "}
           <a
             href="https://www.palantir.com/docs/foundry/logic/overview/"
-            className="text-sage underline"
+            className="text-secondary font-semibold"
             rel="none"
             target="_blank"
           >
@@ -25,20 +26,24 @@ export default function HomePage() {
       </div>
       <div className="flex flex-1 justify-start md:justify-end">
         <div className="flex w-full flex-col gap-5 md:w-[350px]">
-          <div>Some things I like:</div>
-          {recommendations.map(({ category, items }) => (
-            <div
-              key={category}
-              className="flex flex-wrap justify-end gap-5 sm:flex-nowrap "
-            >
-              <div className="flex-1 text-left">{category}</div>
-              <div className="text-sage flex flex-1 flex-col gap-2 text-right opacity-80">
-                {items.map((item) => (
-                  <div key={item}>{item}</div>
-                ))}
-              </div>
+          <div className="font-semibold">Some things I like</div>
+          <div className={styles.animateScrollContainer}>
+            <div className={styles.animateScroll}>
+              {recommendations.map(({ category, items }) => (
+                <div
+                  key={category}
+                  className="flex flex-wrap justify-end gap-5 sm:flex-nowrap "
+                >
+                  <div className="flex-1 text-left">{category}</div>
+                  <div className="text-sage flex flex-1 flex-col gap-2 text-right opacity-80">
+                    {items.map((item) => (
+                      <div key={item}>{item}</div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>

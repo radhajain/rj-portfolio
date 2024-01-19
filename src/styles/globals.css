@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --color-background:#482E1d ;
+        --color-text: #ffffff;
+        --color-secondary: #A3966A;
+        --color-background-highlight: #54351f;
+        height: 100%;
+    }
+   
+}
+
 body {
-    @apply bg-custom-brown h-full
+    @apply bg-background h-full
 }
