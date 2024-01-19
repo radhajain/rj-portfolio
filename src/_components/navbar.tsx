@@ -15,16 +15,20 @@ export default function Navbar() {
     [router],
   );
   return (
-    <div className="bg-custom-brown h-50 sticky top-0 flex w-full flex-row justify-between pt-2 font-serif text-lg text-white">
-      <div onClick={goHome} className="cursor-pointer">
+    <div className=" h-50 sticky top-0 flex w-full flex-row justify-between pt-2 text-lg font-semibold ">
+      <div onClick={goHome} className="hover:text-secondary cursor-pointer">
         Radha Jain
       </div>
       <ul className="flex flex-row gap-5">
         <li>
-          <button onClick={goToExperience}>Experience</button>
+          <button onClick={goToExperience} className="hover:text-secondary">
+            Experience
+          </button>
         </li>
         <li>
-          <button onClick={goToWriting}>Writing</button>
+          <button onClick={goToWriting} className="hover:text-secondary">
+            Writing
+          </button>
         </li>
       </ul>
     </div>

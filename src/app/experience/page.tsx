@@ -8,7 +8,7 @@ export default function Experience() {
         >
           <div className="flex w-full flex-col md:min-w-[400px] md:flex-1 md:gap-5">
             <span className="text-2xl">{title}</span>
-            <i className="text-sage">{dateRange}</i>
+            <span className="text-secondary font-semibold">{dateRange}</span>
           </div>
           <div className="text-right md:flex-1">{description}</div>
         </div>

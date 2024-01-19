@@ -1,0 +1,29 @@
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+        
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+  }
+
+.animateScroll {
+    @apply flex flex-col gap-2;
+    animation: scroll 15s linear infinite
+}
+
+.animateScrollContainer {
+    @apply relative h-56 overflow-hidden;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 7%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 93%);
+}
