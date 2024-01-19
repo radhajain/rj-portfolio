@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 export default function App({ children }: { children: React.ReactNode }) {
   const ref = React.useRef<HTMLDivElement>(null);

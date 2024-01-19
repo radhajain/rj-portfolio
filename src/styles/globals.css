@@ -4,10 +4,10 @@
 
 @layer base {
     :root {
-        --color-background:#1c0862 ;
-        --color-text: #ffffff;
-        --color-secondary: #d4b9fa;
-        --color-background-highlight: #2d0763;
+        --color-background: #221A1A;
+        --color-text: #D1C1C1;
+        --color-secondary:  #ffffff;
+        --color-background-highlight: #371414;
         height: 100%;
     }
    

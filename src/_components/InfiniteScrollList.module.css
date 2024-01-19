@@ -1,0 +1,20 @@
+.animateScrollContainer {
+    @apply relative overflow-hidden;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 7%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 93%);
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateY(calc(-1 * var(--item-height, 152px) / 2));
+    }
+    100% {
+        transform: translateY(calc(-100% + var(--item-height, 152px) + (var(--scroll-container-height) * 0.5)));
+    }
+  }
+
+.animateScroll {
+    @apply flex flex-col gap-2;
+    animation: scroll 10s linear infinite;
+}
+
