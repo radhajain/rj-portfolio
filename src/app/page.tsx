@@ -7,8 +7,8 @@ export default function HomePage() {
     <div className="justify-spaced flex flex-wrap items-start gap-28 lg:flex-nowrap">
       <div className=" flex min-w-full flex-1 flex-col gap-5 text-xl leading-8 sm:min-w-[400px]">
         <div>
-          I&apos;m Radha, a front-end developer based in New York building 0 to
-          1 products. Eight years ago I came to the US from London and, despite
+          I&apos;m a front-end developer based in New York building 0 to 1
+          products. Eight years ago I came to the US from London and, despite
           USCIS&apos;s best efforts, never left.
         </div>
         <div>
