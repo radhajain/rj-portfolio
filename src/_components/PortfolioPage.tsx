@@ -2,7 +2,11 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-export default function App({ children }: { children: React.ReactNode }) {
+export default function PortfolioPage({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const ref = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const updateMousePosition = (event: MouseEvent) => {
@@ -21,7 +25,7 @@ export default function App({ children }: { children: React.ReactNode }) {
     <div
       ref={ref}
       className={
-        "bg-background text-text-color flex h-full justify-center bg-[radial-gradient(circle_farthest-side_at_var(--x,100px)_var(--y,100px),_var(--color-background-highlight)_0%,_transparent_50%)] font-light"
+        "flex h-full justify-center bg-background bg-[radial-gradient(circle_farthest-side_at_var(--x,100px)_var(--y,100px),_var(--color-background-highlight)_0%,_transparent_50%)] font-light text-text-color"
       }
     >
       <div className="container flex flex-col items-center md:max-w-6xl ">

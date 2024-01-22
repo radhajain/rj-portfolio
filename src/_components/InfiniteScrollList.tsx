@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./InfiniteScrollList.module.css";
 
-const defaultHeight = 224;
+const defaultHeight = 220;
 
 /*
  * Creates an infinitely scrolling list.

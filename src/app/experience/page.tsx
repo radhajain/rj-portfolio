@@ -1,21 +1,26 @@
+"use client";
+import PortfolioPage from "~/_components/PortfolioPage";
+
 export default function Experience() {
   return (
-    <div className="flex w-full flex-col gap-10 ">
-      {workExperience.map(({ title, description, dateRange }) => (
-        <div
-          className="md:gap-15 md:flex-no-wrap flex flex-wrap gap-5"
-          key={title}
-        >
-          <div className="flex w-full flex-col md:min-w-[400px] md:flex-1 md:gap-5">
-            <span className="text-2xl">{title}</span>
-            <span className="text-secondary font-semibold">{dateRange}</span>
+    <PortfolioPage>
+      <div className="flex w-full flex-col gap-10 ">
+        {workExperience.map(({ title, description, dateRange }) => (
+          <div
+            className="md:gap-15 md:flex-no-wrap flex flex-wrap gap-5"
+            key={title}
+          >
+            <div className="flex w-full flex-col md:min-w-[400px] md:flex-1 md:gap-5">
+              <span className="text-2xl">{title}</span>
+              <span className="font-semibold text-secondary">{dateRange}</span>
+            </div>
+            <div className="text-left opacity-80 md:flex-1 md:text-right">
+              {description}
+            </div>
           </div>
-          <div className="text-left opacity-80 md:flex-1 md:text-right">
-            {description}
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </PortfolioPage>
   );
 }
 
