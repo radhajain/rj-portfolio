@@ -1,37 +1,44 @@
 "use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
+const routes = [
+  {
+    label: "Experience",
+    route: "/experience",
+  },
+  {
+    label: "Writing",
+    route: "/writing",
+  },
+];
+
 export default function Navbar() {
-  const router = useRouter();
-  const goHome = React.useCallback(() => router.push("/"), [router]);
-  const goToWriting = React.useCallback(
-    () => router.push("/writing"),
-    [router],
-  );
-  const goToExperience = React.useCallback(
-    () => router.push("/experience"),
-    [router],
-  );
+  const pathname = usePathname();
   return (
-    <div className=" h-50 sticky top-0 flex w-full flex-row justify-between pb-2 pt-2 text-lg font-semibold backdrop-blur">
-      <div
-        onClick={goHome}
-        className="cursor-pointer hover:text-secondary hover:underline-offset-1"
+    <div className=" h-50 xs:flex-row sticky top-0 flex w-full flex-col justify-between pb-2 pt-2 text-lg font-semibold backdrop-blur">
+      <Link
+        href="/"
+        className={pathname === "/" ? "text-secondary" : "hover:text-secondary"}
       >
         Radha Jain
-      </div>
+      </Link>
       <ul className="flex flex-row gap-5">
-        <li>
-          <button onClick={goToExperience} className="hover:text-secondary">
-            Experience
-          </button>
-        </li>
-        <li>
-          <button onClick={goToWriting} className="hover:text-secondary">
-            Writing
-          </button>
-        </li>
+        {routes.map(({ label, route }) => (
+          <li key={route}>
+            <Link
+              className={
+                pathname.includes(route)
+                  ? "text-secondary"
+                  : "hover:text-secondary"
+              }
+              href={route}
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

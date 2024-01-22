@@ -6,15 +6,15 @@
 
  @keyframes scroll {
     0% {
-        transform: translateY(calc((0.5 * var(--scroll-container-height)) - var(--item-height, 152px) - 8px));
+        transform: translateY(calc((0.5 * var(--scroll-container-height, 224px)) - var(--item-height, 152px) - 8px));
     }
     100% {
-        transform: translateY(calc(-100% + var(--item-height, 152px) + (var(--scroll-container-height) * 0.5)));
+        transform: translateY(calc(-100% + var(--item-height, 152px) + (var(--scroll-container-height, 224px) * 0.5)));
     }
   } 
 
 .animateScroll {
-    @apply flex flex-col gap-2;
+    @apply flex flex-col gap-5 xs:gap-2;
     animation: scroll 10s linear infinite;
 }
 

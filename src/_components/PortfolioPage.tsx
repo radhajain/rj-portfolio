@@ -25,10 +25,10 @@ export default function PortfolioPage({
     <div
       ref={ref}
       className={
-        "flex h-full justify-center bg-background bg-[radial-gradient(circle_farthest-side_at_var(--x,100px)_var(--y,100px),_var(--color-background-highlight)_0%,_transparent_50%)] font-light text-text-color"
+        "flex h-full w-full justify-center bg-background bg-[radial-gradient(circle_farthest-side_at_var(--x,100px)_var(--y,100px),_var(--color-background-highlight)_0%,_transparent_50%)] font-light text-text-color"
       }
     >
-      <div className="container flex flex-col items-center md:max-w-6xl ">
+      <div className="flex w-full flex-col items-center md:max-w-6xl ">
         <div className="w-full p-10">
           <Navbar />
           <div className="mt-20">{children}</div>
