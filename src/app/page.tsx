@@ -9,8 +9,8 @@ export default function HomePage() {
       <div className="justify-spaced flex flex-wrap items-start gap-28 lg:flex-nowrap">
         <div className=" flex min-w-full flex-1 flex-col gap-5 text-xl leading-8 sm:min-w-[400px]">
           <div>
-            I&apos;m a front-end developer based in New York building 0 to 1
-            products. Eight years ago I came to the US from London and, despite
+            I&apos;m a developer based in New York building 0 to 1 products.
+            Eight years ago I came to the US from London and, despite
             USCIS&apos;s best efforts, never left.
           </div>
           <div>
@@ -60,12 +60,12 @@ function renderRecommendation({ category, items }: CategoryRecommendations) {
   return (
     <div
       key={category}
-      className="align-center flex h-[152px] flex-wrap justify-end gap-5 sm:flex-nowrap"
+      className="align-center xs:h-[152px] xs:flex-row flex flex-col flex-wrap justify-end gap-5 sm:flex-nowrap"
     >
       <div className="flex-1 text-left font-semibold text-secondary">
         {category}
       </div>
-      <div className="text-sage flex-2 flex flex-col gap-2 text-right opacity-80">
+      <div className="text-sage flex-2 xs:text-right flex flex-col gap-2 opacity-80">
         {items.map((item) => (
           <div key={item}>{item}</div>
         ))}
@@ -120,8 +120,8 @@ const recommendations: readonly CategoryRecommendations[] = [
     items: [
       "Wallace Collection",
       "Designmuseum Danmark",
-      "Vietnam Museum of Ethnology",
-      "Museum of the City of New York",
+      "War remnants museum",
+      "The Vasa Museum",
       "Real Alcazar de Sevilla",
     ],
   },
