@@ -1,4 +1,5 @@
 "use client";
+import { LinkedInIcon } from "public/icons";
 import PortfolioPage from "~/_components/PortfolioPage";
 
 export default function Experience() {
@@ -19,6 +20,14 @@ export default function Experience() {
             </div>
           </div>
         ))}
+        <a
+          href="https://www.linkedin.com/in/radha-jain-815047122"
+          className="opacity-80"
+          rel="none"
+          target="_blank"
+        >
+          <LinkedInIcon className="opacity-70 hover:opacity-100" />
+        </a>
       </div>
     </PortfolioPage>
   );

@@ -26,6 +26,16 @@ export default function HomePage() {
             Previously, I founded a fashion-tech startup and took it through
             YCombinator, and studied Computer Science & Economics at Stanford.
           </div>
+          <div>
+            Contact:{" "}
+            <a
+              href="mailto:hi@radhajain.com"
+              className="underline-offset-5 underline hover:text-secondary"
+            >
+              hi@radhajain.com
+            </a>
+            .
+          </div>
         </div>
         <div className="flex flex-1 justify-start md:justify-end">
           <div className="flex w-full flex-col gap-5 md:w-[350px]">
