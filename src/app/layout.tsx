@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Radha's site",
+  title: "Radha Jain",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
