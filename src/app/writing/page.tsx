@@ -1,3 +1,10 @@
+"use client";
+import PortfolioPage from "~/_components/PortfolioPage";
+
 export default function Writing() {
-  return <div>Coming soon</div>;
+  return (
+    <PortfolioPage>
+      <div>Coming soon</div>
+    </PortfolioPage>
+  );
 }
