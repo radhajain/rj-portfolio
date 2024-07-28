@@ -1,20 +1,36 @@
 .animateScrollContainer {
-    @apply relative overflow-hidden;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 5%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 95%);
+  @apply relative overflow-hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 5%,
+    rgb(0, 0, 0) 50%,
+    rgb(0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 95%
+  );
 }
 
-
- @keyframes scroll {
-    0% {
-        transform: translateY(calc((0.5 * var(--scroll-container-height, 224px)) - var(--item-height, 152px) - 8px));
-    }
-    100% {
-        transform: translateY(calc(-100% + var(--item-height, 152px) + (var(--scroll-container-height, 224px) * 0.5)));
-    }
-  } 
+@keyframes scroll {
+  0% {
+    transform: translateY(
+      calc(
+        (0.5 * var(--scroll-container-height, 224px)) -
+          var(--item-height, 152px) - 8px
+      )
+    );
+  }
+  100% {
+    transform: translateY(
+      calc(
+        -100% + var(--item-height, 152px) + (var(
+                --scroll-container-height,
+                224px
+              ) * 0.5)
+      )
+    );
+  }
+}
 
 .animateScroll {
-    @apply flex flex-col gap-5 xs:gap-2;
-    animation: scroll 10s linear infinite;
+  @apply flex flex-col gap-5 xs:gap-2;
+  animation: scroll 7s linear infinite;
 }
-

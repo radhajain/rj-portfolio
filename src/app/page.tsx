@@ -10,19 +10,22 @@ export default function HomePage() {
         <div className=" flex min-w-full flex-1 flex-col gap-5 text-xl leading-8 sm:min-w-[400px]">
           <div>
             I&apos;m a developer based in New York building 0 to 1 products.
-            Eight years ago I came to the US from London and, despite
+            Nine years ago I came to the US from London and, despite
             USCIS&apos;s best efforts, never left.
           </div>
           <div>
-            I currently work on a small team building{" "}
+            I currently work on a small team building Palantir&apos;s flagship
+            AI application,{" "}
             <a
-              href="https://www.palantir.com/docs/foundry/logic/overview/"
-              className="font-semibold hover:text-secondary"
+              href="https://www.palantir.com/platforms/aip/"
+              className="underline hover:text-secondary"
               rel="none"
               target="_blank"
             >
-              Palantir&apos;s flagship AI application, AIP Logic.
-            </a>{" "}
+              AIP Logic.
+            </a>
+          </div>
+          <div>
             Previously, I founded a fashion-tech startup and took it through
             YCombinator, and studied Computer Science & Economics at Stanford.
           </div>
@@ -34,7 +37,6 @@ export default function HomePage() {
             >
               hi@radhajain.com
             </a>
-            .
           </div>
         </div>
         <div className="flex flex-1 justify-start md:justify-end">
@@ -60,12 +62,12 @@ function renderRecommendation({ category, items }: CategoryRecommendations) {
   return (
     <div
       key={category}
-      className="align-center xs:h-[152px] xs:flex-row flex flex-col flex-wrap justify-end gap-5 sm:flex-nowrap"
+      className="align-center flex flex-col flex-wrap justify-end gap-5 xs:h-[152px] xs:flex-row sm:flex-nowrap"
     >
       <div className="flex-1 text-left font-semibold text-secondary">
         {category}
       </div>
-      <div className="text-sage flex-2 xs:text-right flex flex-col gap-2 opacity-80">
+      <div className="text-sage flex-2 flex flex-col gap-2 opacity-80 xs:text-right">
         {items.map((item) => (
           <div key={item}>{item}</div>
         ))}
@@ -75,26 +77,7 @@ function renderRecommendation({ category, items }: CategoryRecommendations) {
 }
 
 const recommendations: readonly CategoryRecommendations[] = [
-  {
-    category: "Movies",
-    items: [
-      "Apolcapyse Now",
-      "The Talented Mr Ripley",
-      "Gone girl",
-      "American psycho",
-      "City of God",
-    ],
-  },
-  {
-    category: "Cities",
-    items: [
-      "Montpellier, FR",
-      "Buenos Aires, AR",
-      "Ho Chi Minh City, VN",
-      "Bergen, NO",
-      "Havana, CU",
-    ],
-  },
+  // Essays?, with links
   {
     category: "Books",
     items: [
@@ -108,21 +91,11 @@ const recommendations: readonly CategoryRecommendations[] = [
   {
     category: "Activities",
     items: [
-      "Triathalons",
+      "Road biking",
       "Kickboxing",
       "Woodworking",
       "Scuba diving",
       "Hot yoga",
-    ],
-  },
-  {
-    category: "Museums",
-    items: [
-      "Wallace Collection",
-      "Designmuseum Danmark",
-      "War remnants museum",
-      "The Vasa Museum",
-      "Real Alcazar de Sevilla",
     ],
   },
   {
@@ -132,7 +105,7 @@ const recommendations: readonly CategoryRecommendations[] = [
       "Architecture",
       "Behavioral economics",
       "Foreign affairs",
-      "Interior design",
+      "Healthcare",
     ],
   },
 ];
