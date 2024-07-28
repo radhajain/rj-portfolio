@@ -10,12 +10,6 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-export const metadata = {
-  title: "Radha Jain",
-  description: "Personal portfolio for Radha Jain, New York",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -23,6 +17,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Radha Jain</title>
+        <meta charSet="UTF-8"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        <meta
+          name="description"
+          content="Personal portfolio for Radha Jain, a developer at Palantir in New York."
+        ></meta>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://www.radhajain.com"></link>
+        <meta name="robots" content="index, follow" />
+      </head>
       <body className={`font-sans ${inter.variable}`}>
         <main className="h-full">{children}</main>
         <SpeedInsights />
