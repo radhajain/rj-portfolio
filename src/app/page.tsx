@@ -10,8 +10,7 @@ export default function HomePage() {
         <div className=" flex min-w-full flex-1 flex-col gap-5 text-xl leading-8 sm:min-w-[400px]">
           <div>
             I&apos;m a developer based in New York building 0 to 1 products.
-            Nine years ago I came to the US from London and, despite
-            USCIS&apos;s best efforts, never left.
+            Nine years ago I came to the US from London and never left.
           </div>
           <div>
             I currently work on a small team building Palantir&apos;s flagship
